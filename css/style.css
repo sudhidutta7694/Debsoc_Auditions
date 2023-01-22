@@ -1,0 +1,151 @@
+:root{
+    --typewriterSpeed : 6s;
+    --typewriterCharacters : 20;
+    --bg-color : rgb(0,0,0,0.9);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&&family=Source+Code+Pro:wght@200display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    justify-content: right;
+    border-radius: 8px;
+    /* background-color: darkgoldenrod; */
+    align-items: center;
+    /* border: 5px  ridge black; */
+    font-weight: 500;
+    font-size: larger;
+    height: 8vh;
+    box-shadow: 0px 0px 10px darkgreen;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    /* background-image: url('DS_logo.png'); */
+    /* width: 1000px; */
+    padding:0px 67vw 0px 23px;
+}
+.logo :hover{
+    box-shadow: 0px 0px 10px darkmagenta;
+}
+nav div {
+    padding: 0px 23px;
+    color: rgb(0, 0, 0);
+}
+nav div a {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: 'Roboto Slab', cursive;
+}
+nav div a:hover{
+    text-shadow: 0px 0px 10px rgb(216, 207, 20);
+    font-weight: bold;
+    color: rgb(104, 2, 246);
+    font-family: 'Roboto Slab', cursive;
+}
+main {
+    display: flex;
+    height:76vh;
+    background-image: url("https://scontent.fdbd3-1.fna.fbcdn.net/v/t39.30808-6/299496650_1602529070144674_2650264387508605784_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7_0WdNH2dIkAX-TGVYt&_nc_ht=scontent.fdbd3-1.fna&oh=00_AfBWMFEfjSMxhQvtGKSis9mVLbA402sCKprWlK8CK2o4jg&oe=63CDDEC4");
+    background-size: cover;
+    justify-content: center;
+    align-items: top;
+}
+main .box{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+    /* background-blend-mode:luminosity; */
+    backdrop-filter: blur(10px);
+    /* -webkit-filter: blur(2px); */
+    width: 30vw;
+    height: 10vh;
+    font-size: xx-large;
+    display: flex;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10vh;
+    border-radius: 25px;
+}
+main .Group_Image .box p{
+    /* font-size: clamp(1rem, 3vw + 1rem, 4rem); */
+    /* position: relative; */
+    font-family: "Source Code Pro", monospace;
+    position: relative;
+    width: max-content;
+}
+
+main .Group_Image .box p::before,
+main .Group_Image .box p::after {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+main .Group_Image .box p::before {
+background: var(--bg-color);
+animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+main .Group_Image .box p::after {
+width: 1px;
+background: rgb(255, 255, 255);
+animation: typewriter var(--typewriterSpeed)
+    steps(var(--typewriterCharacters)) 1s forwards,
+    blink 750ms steps(var(--typewriterCharacters)) infinite;
+}
+
+/* .subtitle {
+color: rgb(0,0,0,0.5);
+font-size: 2rem;
+font-weight: 400;
+opacity: 0;
+transform: translateY(3rem);
+animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+} */
+
+@keyframes typewriter {
+to {
+    left: 100%;
+}
+}
+
+@keyframes blink {
+to {
+    background: transparent;
+}
+}
+footer{
+    border:3px solid black;
+    font-family: cursive;
+    border-radius: 5px;
+}
+.foot1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color:darkmagenta;
+    color:antiquewhite;
+    font-weight:500;
+}
+.foot2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    background-color:black;
+    color:antiquewhite;
+    font-weight:500;
+}
